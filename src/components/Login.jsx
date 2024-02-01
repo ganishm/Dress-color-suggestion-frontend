@@ -44,7 +44,7 @@ function Login() {
   let validateSignUp = async (e) => {
     e.preventDefault();
     try {
-      let res = await AxiosService.post("/signup", {
+      let res = await AxiosService.post("/login", {
         firstName,
         lastName,
         email,
@@ -52,7 +52,7 @@ function Login() {
       });
       if (res.status === 201) {
         toast.success("User Created Successfully, Click on Login");
-        navigate("/");
+        navigate("/login");
       }
     } catch (error) {
       toast.error(
