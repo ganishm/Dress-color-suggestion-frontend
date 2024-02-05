@@ -23,7 +23,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      let res = await AxiosService.post("/login", {
+      let res = await AxiosService.post("https://dress-color-suggestions.onrender.com/login", {
         email,
         password,
       });
@@ -44,7 +44,7 @@ function Login() {
   let validateSignUp = async (e) => {
     e.preventDefault();
     try {
-      let res = await AxiosService.post("/login", {
+      let res = await AxiosService.post("https://dress-color-suggestions.onrender.com/signin", {
         firstName,
         lastName,
         email,
@@ -68,7 +68,7 @@ function Login() {
       if (!email) {
         toast.error("Enter Email Id first");
       } else {
-        let res = await AxiosService.post("/forgetPassword", {
+        let res = await AxiosService.post("https://dress-color-suggestions.onrender.com/forgetPassword", {
           email,
         });
         console.log(res);
