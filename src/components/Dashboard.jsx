@@ -34,7 +34,7 @@ function Header() {
 
   const suggestcolor = async () => {
     try {
-      const res = await AxiosService.put(`/suggestcolor/${id}`);
+      const res = await AxiosService.put(`/login/${id}`);
       console.log("suggest:",res)
 
       useEffect(() => {
